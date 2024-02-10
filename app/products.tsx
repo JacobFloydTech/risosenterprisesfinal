@@ -47,7 +47,7 @@ export default function Products() {
     return (
 
 
-        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr] w-[99%] md:w-2/3 xl:w-1/2   h-full  mx-auto ">
+        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full xl:w-2/3 2xl:w-1/2 md:h-[1200px] 2xl:h-[1500px]  mx-auto ">
             <SVG/>
        
             <div id='newsContainer' className=" flex flex-col justify-between h-[85%] my-auto  py-8 text-white  w-full xl:w-[95%] relative">

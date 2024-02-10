@@ -1,15 +1,25 @@
 'use client'
 import { Canvas, useFrame } from "@react-three/fiber"
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { Model } from '../Logo2.jsx';
 import { RepeatWrapping, TextureLoader, WebGLRenderer } from "three";
 
 import { useTexture } from "@react-three/drei";
 
 export default function CustomLogo() {
+  const ref = useRef<any>();
+  useEffect(() => { 
+    if (!ref.current) return;
+
+    const safariRegex = /^((?!chrome|android).)*safari/i;
+
+    // Check if the user agent string matches Safari
+    const isSafari = safariRegex.test(navigator.userAgent);
+    if (!isSafari) {ref.current.style.display = 'block';}
+  },[])
 
   return (
-    <div className="w-full h-full p-[25px]   rounded-full md:p-0 xl:p-1 2xl:p-3 z-60">
+    <div ref={ref} className="h-full p-[25px] hidden  rounded-full md:p-0 xl:p-1 2xl:p-3 z-60">
       <Canvas camera={{ position: [0, 0, 5] }} className="  bg-black w-full h-full z-60 rounded-full">
         <Model />
         <DarkRing />
