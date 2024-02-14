@@ -5,10 +5,6 @@ import * as THREE from 'three'
 import { BokehPass, EffectComposer, RenderPass, ShaderPass, Water } from 'three/examples/jsm/Addons.js';
 import {   animateRings,  changeTImeValue, handleAnimation} from './display';
 import { VignetteShader } from 'three/examples/jsm/Addons.js';
-import Image from 'next/image';
-
-
-import ContactFormComponent from './contactFormComponent';
 
 let velocity = -0.05;
 
@@ -21,10 +17,10 @@ export default function ThreeJSBackground({setLoaded}: { setLoaded: Function}) {
      },[setLoadedImage, setLoadedScene, loadedImage, loadedScene])
     useEffect(() => { setScene(ref, setLoadedScene) }, [])
     return (
-        <div className={'w-full h-full fixed -bottom-12 -z-10 bg-orange-500'  + (loadedImage && loadedScene ? " opacity-1" : " opacity-0")}>
+        <div className={'w-full h-full fixed -bottom-12 -z-10 bg-orange-600'  + (loadedImage && loadedScene ? " opacity-1" : " opacity-0")}>
             <div className='w-full h-full'  ref={ref} />
-                    <img src='/sun.jpg' fetchPriority='high' className='w-full -translate-y-40 md:-translate-y-40 object-cover absolute top-0 left-0 -z-40 h-[80%] md:h-3/4'/>
-            <ContactFormComponent/>
+                    <img src='/sun1.jpg' fetchPriority='high' className='w-full -translate-y-[70px] md:-translate-y-40 object-cover absolute top-0 left-0 -z-40 h-[80%] md:h-3/4'/>
+   
         </div>
 
     )

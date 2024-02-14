@@ -10,11 +10,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
 
     useEffect(() => {
         setter(true)
-        if (window.innerWidth <= 1366) { 
-            window.addEventListener('scroll', handleScroll, false);       
-        }
-     
-        return () => window.removeEventListener('scroll', handleScroll, false);
+        
     }, [])
 
     function handleScroll() {
@@ -39,9 +35,10 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
         const el = document.getElementById('videoContainer');
         if (!el) { return; }
         let player = document.getElementById('video') as HTMLVideoElement;
+        player.classList.add('videoFadeIn')
         setTimeout(() => {
             player?.play();
-        }, 1500);
+        }, 2200);
         setTimeout(() => {
             document.getElementById('backgroundFilter')?.classList.add('backgroundFilter');
             document.getElementById('videoText')?.classList.add('videoText');
@@ -65,9 +62,9 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     const chemicals = ['Nitrates', 'Phosphates', 'Hormones', 'Microplastics', 'Cyanobacteria']
     return (
         <>
-            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition hover:scale-110 duration-100 hidden md:block">Squeeze me</button>
+            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition hover:scale-110 duration-100">Squeeze me</button>
             <div id='videoContainer' className=" w-full h-96 lg:h-[450px] xl:h-[500px] 2xl:h-[800px]  relative flex flex-col justify-center items-center ">
-                <video preload="auto" disableRemotePlayback id='video' className="w-full h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
+                <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
                     <source type="video/webm" src="waicorderRenderTest.webm"/>
                     <source type="video/mp4" src="output.mp4"/>
                 </video>

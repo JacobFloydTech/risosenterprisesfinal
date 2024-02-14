@@ -23,7 +23,6 @@ export default function Logo() {
 
         // Check if the user agent string matches Safari
         const isSafari = safariRegex.test(navigator.userAgent);
-        console.log(isSafari);
         if (!isSafari) {
             const logoElement = document.getElementById('logo');
             //@ts-ignore
@@ -31,9 +30,9 @@ export default function Logo() {
             logoElement.style.padding = '20px';
         }
         if (document.body.scrollHeight < 1000) {
-            return setMobileScrollDetection(50)
+            setMobileScrollDetection(50)
         }
-        if (window.screen.width <= 640) {
+        else if (window.screen.width <= 640) {
             setMobileScrollDetection(100)
 
         }

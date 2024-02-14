@@ -11,6 +11,10 @@
     animation-delay: 1.2s;
 }
 
+.videoFadeIn { 
+    animation: fade 1.6s both; 
+}
+
 .fadeOut { 
     opacity: 0;
     transition: all 2s ease-out;
