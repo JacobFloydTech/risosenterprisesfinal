@@ -12,13 +12,7 @@ export default function Logo() {
 
 
     useEffect(() => {
-        if (document.body.scrollHeight < 1000) {
-            return setMobileScrollDetection(50)
-        }
-        if (window.screen.width <= 640) {
-            setMobileScrollDetection(100)
 
-        }
 
         const resizeObserver = new ResizeObserver(() => {
             setAnimations();
@@ -29,10 +23,19 @@ export default function Logo() {
 
         // Check if the user agent string matches Safari
         const isSafari = safariRegex.test(navigator.userAgent);
+        console.log(isSafari);
         if (!isSafari) {
             const logoElement = document.getElementById('logo');
             //@ts-ignore
+          
             logoElement.style.padding = '20px';
+        }
+        if (document.body.scrollHeight < 1000) {
+            return setMobileScrollDetection(50)
+        }
+        if (window.screen.width <= 640) {
+            setMobileScrollDetection(100)
+
         }
 
 
