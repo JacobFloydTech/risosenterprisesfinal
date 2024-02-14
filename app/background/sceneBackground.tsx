@@ -18,9 +18,15 @@ export default function ThreeJSBackground({setLoaded}: { setLoaded: Function}) {
     useEffect(() => { setScene(ref, setLoadedScene) }, [])
     return (
         <div className={'w-full h-full fixed -bottom-12 -z-10 bg-orange-600'  + (loadedImage && loadedScene ? " opacity-1" : " opacity-0")}>
+               <img id="sun" src='/sun1.jpg' fetchPriority='high' className='w-full object-cover absolute top-0 left-0 translate-y-50 -z-40 h-full'/>
+               <img id="sun" src='/sun1.jpg' fetchPriority='high' className='w-full object-cover absolute top-0 left-0 -z-40 -translate-y-60 h-full'/>
+
+
+ 
             <div className='w-full h-full'  ref={ref} />
-                    <img src='/sun1.jpg' fetchPriority='high' className='w-full -translate-y-[70px] md:-translate-y-40 object-cover absolute top-0 left-0 -z-40 h-[80%] md:h-3/4'/>
-   
+    
+     
+
         </div>
 
     )

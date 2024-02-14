@@ -13,7 +13,8 @@ export default function Page() {
 
   return (
     <div id='main' className="flex flex-col items-center jutify-center pt-24  h-auto w-full">
-      <div className="scrollBar z-50" />
+     
+
       <ThreeJSBackground setLoaded={setLoaded}/>
       {loaded ? 
       <div>

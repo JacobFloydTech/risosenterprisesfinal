@@ -17,7 +17,7 @@ export function addWater(scene: THREE.Scene) {
             textureWidth: 1024,
             textureHeight: 1024,
             waterNormals: texture,
-            alpha:0.65,// Transrency
+            alpha:0.75,// Transrency
             sunColor: 0x21EAFF,
 
             waterColor: 0x00DEFF,

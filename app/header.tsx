@@ -66,6 +66,7 @@ export default function Header() {
 
     return (
         <div className={"flex flex-col md:pt-24 w-full  md:space-y-0 items-center" + (videoLoaded ? " opacity-1" : " opacity-0")}>
+            
             <div id='container' className="flex-col  h-auto md:w-3/4 w-full justify-center items-center LoraText  font-bold text-2xl md:text-6xl pb-12 mt-36 sm:mt-20 ">
                 <div id='vision' className=" grid   items-center justify-center md:w-full mx-auto">
                     <div className=" text-center  backdrop-blur-md bg-[rgba(255,240,0,0.2)] px-2 md:px-4 py-2 rounded-3xl mx-4">

@@ -3,16 +3,13 @@
 @tailwind utilities;
 
 
-
-
-
 .squeezeButton { 
     animation: squeezeButtonAnimation both 400ms ease-in-out;
     animation-delay: 1.2s;
 }
 
 .videoFadeIn { 
-    animation: fade 1.6s both; 
+    animation: fade 2s both; 
 }
 
 .fadeOut { 
