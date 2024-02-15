@@ -64,7 +64,7 @@ export default function ContactForm() {
     }
     }
     return (
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_SITEKEY!}>
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_SITE!}>
             <GoogleReCaptcha onVerify={(token) => verifyToken(token)} />
             {error && <ErrorMessage error={error} />}
             {success && <Success />}
