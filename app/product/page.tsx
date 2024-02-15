@@ -11,11 +11,12 @@ import ProductContent from "./productContent";
 export default async function ProductPage() {
     const session = await getServerSession();
     if (!session) {
-        return <ComingSoon />
+
+        return <div><ComingSoon /></div>
     }
-    return (
-        <ProductContent/>
-    )
+    else {return (
+        <div><ProductContent/></div>
+    )}
 }
 
 

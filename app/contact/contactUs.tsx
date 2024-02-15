@@ -21,6 +21,7 @@ export default function ContactForm() {
     async function verifyToken(token: string) {
         const request = await fetch('/api/verifyForm', { method: "POST", body: JSON.stringify({ token: token }) })
         const data = await request.json();
+        console.log(data);
         setVerify(data.success);
     }
 
@@ -60,10 +61,10 @@ export default function ContactForm() {
             configureSuccess();
         } else {
             configureError("Something else went wrong, please try again")
-        }
+    }
     }
     return (
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY!}>
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_SITEKEY!}>
             <GoogleReCaptcha onVerify={(token) => verifyToken(token)} />
             {error && <ErrorMessage error={error} />}
             {success && <Success />}
