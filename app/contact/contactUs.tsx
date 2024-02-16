@@ -18,7 +18,7 @@ export default function ContactForm() {
 
 
 
-    async function verifyToken(token: string) {
+async function verifyToken(token: string) {
         const request = await fetch('/api/verifyForm', { method: "POST", body: JSON.stringify({ token: token }) })
         const data = await request.json();
         console.log(data);

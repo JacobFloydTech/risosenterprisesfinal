@@ -12,12 +12,12 @@ export async function POST(req: NextRequest) {
           secure: false,
           auth: {
             type: 'Login',
-            user: "contactformrisosenterprises@gmail.com",
+            user: "risosenterprisescontactform@gmail.com",
             pass: process.env.EMAIL_PASSWORD!,
           },
         });
         const sendMail = await smtpTransport.sendMail({
-            from: 'contactformrisosenterprises@gmail.com',
+            from: 'risosenterprisescontactform@gmail.com',
             to: 'a.risos@risosenterprises.com'
 ,
             subject: `Message from ${Capitalize(firstName)} ${!!!lastName ? '' : Capitalize(lastName)} - Email ${email}`,
