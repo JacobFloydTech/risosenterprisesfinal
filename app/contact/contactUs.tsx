@@ -21,7 +21,6 @@ export default function ContactForm() {
 async function verifyToken(token: string) {
         const request = await fetch('/api/verifyForm', { method: "POST", body: JSON.stringify({ token: token }) })
         const data = await request.json();
-        console.log(data);
         setVerify(data.success);
     }
 
@@ -60,7 +59,8 @@ async function verifyToken(token: string) {
         if (request.status == 200) {
             configureSuccess();
         } else {
-            configureError("Something else went wrong, please try again")
+            const {error} = await request.json();
+            configureError(error)
     }
     }
     return (
