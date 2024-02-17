@@ -72,8 +72,9 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                 <div className="z-40 text-white md:text-lg font-bold w-3/4 md:w-2/3 2xl:w-1/2  mx-auto text-center" >
                     <div id='videoText' className="opacity-0">
                         <p className=" xl:text-4xl 2xl:text-5xl 3xl:text-6xl md:text-xl  text-lg font-bold ">The Waicorder</p>
+                        <p className="2xl:text-2xl xl:text-xl md:text-lg tex-sm py-2 font-semibold">Wāi Ora. Tāngata Ora</p>
                         <div className="w-full mx-auto my-2 h-[3px] bg-white 3xl:my-4 " />
-                        <p className="text-sm xl:text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Revolutionizing Water Testing Soon</p>
+                        <p className="text-sm xl:text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Pathogenic Water Testing in Seconds</p>
                     </div>
                     <div ref={grid} className="grid grid-cols-2 md:-4  xl:w-3/4  mx-auto">
                         <ul className="flex flex-col items-center md:space-y-2 2xl:space-y-4">
