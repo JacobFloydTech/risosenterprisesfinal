@@ -29,7 +29,7 @@
         color: yellow;
         letter-spacing: 1px; 
               font-family: 'Arial', sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         -webkit-text-stroke: 0.2px black;
     }
 }
@@ -141,6 +141,10 @@ html, body {
 
 .fadeIn { 
     animation: fade 4s ease-in-out;
+}
+
+.fadeInHeader { 
+    animation: fade 1.5s ease-in-out;
 }
 
 .contactGridCol { 

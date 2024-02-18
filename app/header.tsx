@@ -65,12 +65,16 @@ export default function Header() {
 
 
     return (
-        <div className={"flex flex-col md:pt-24 w-full  md:space-y-0 items-center" + (videoLoaded ? " opacity-1" : " opacity-0")}>
+        <div className={"flex flex-col md:pt-24 w-screen overflow-hidden md:space-y-0 items-center" + (videoLoaded ? " opacity-1" : " opacity-0")}>
             
             <div id='container' className="flex-col  h-auto md:w-3/4 w-full justify-center items-center LoraText  font-bold text-2xl md:text-6xl pb-12 mt-36 sm:mt-20 ">
 
-                    <div className=" text-center md:w-2/3 mx-4 md:mx-auto  backdrop-blur-md bg-[rgba(255,240,0,0.2)] px-2 md:px-4 py-2 rounded-3xl ">
-                        <p className="py-1 md:py-4 font-bold outlined-text">Control The Quality of Your Water</p>
+                    <div className=" text-center md:w-2/3 w-[95%] mx-auto  backdrop-blur-md bg-[rgba(255,240,0,0.2)] px-2 md:px-4 py-2 rounded-3xl ">
+                        <div className="py-1 md:py-6 font-bold outlined-text flex flex-col md:space-y-4">
+                            <p className="md:pb-10 pb-4">Take Control of The Water Safety</p>
+                            <p>Independent Waterborne Pathogen</p>
+                            <p>Testing in Seconds Coming Soon</p>
+                        </div>
                 </div>
 
             </div>
