@@ -63,7 +63,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     return (
         <>
             <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition hover:scale-110 duration-100">Squeeze me</button>
-            <div id='videoContainer' className=" w-full h-96 lg:h-[450px] xl:h-[500px] 2xl:h-[800px]  relative flex flex-col justify-center items-center ">
+            <div id='videoContainer' className=" w-full h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
                     <source type="video/webm" src="waicorderRenderTest.webm"/>
                     <source type="video/mp4" src="output.mp4"/>
@@ -91,6 +91,13 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
         
                     <div ref={buttons} className=" xl:w-3/4 2xl:w-2/3 pt-4 text-white z-40 flex justify-center items-center space-y-8 md:space-y-0  md:text-lg 2xl:text-xl 3xl:text-2xl my-2  md:my-4 xl:my-12   opacity-0 mx-auto">
                         <div className="flex flex-col items-center space-y-2 justify-center">
+                            <p className="text-xs py-1 md:py-4 xl:py-6 md:text-base xl:text-xl">Taking actions against waterborne pathogens instantly is critical. <br/>
+It means more than freedom and independence; <br/>
+it will be the next step for all people on earth. <br/>
+This generation and the next generation. <br/>
+This planet and others to come. <br/>
+It will be the fundamental step for unity and peace. <br/>
+That's why we develop the Waicorder</p>
                             <p className="text-sm md:text-xl 2xl:text-lg ">Get in touch if you want to help, join or know more:</p>
                             <button onClick={() => window.location.href = '/contact'} className="bg-[#f2cc00] rounded-full border-white border-2 px-4 py-2 transition duration-200 hover:scale-105 hover:[background-size:200%] xl:hover:scale-110  p-2  3xl:px-8 3xl:py-4">Get in contact </button>
                         </div>
