@@ -65,8 +65,8 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
             <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition hover:scale-110 duration-100">Squeeze me</button>
             <div id='videoContainer' className=" w-full h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
-                    <source type="video/webm" src="waicorderRenderTest.webm"/>
-                    <source type="video/mp4" src="output.mp4"/>
+                    <source type="video/webm" src="public/waicorderRenderTest.webm"/>
+                    <source type="video/mp4" src="public/output.mp4"/>
                 </video>
                 <div id='backgroundFilter' className="z-30 px-4 py-2 rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-1/2 bg-[rgba(255,240,0,0.2)] backdrop-blur-lg opacity-0 h-full" />
                 <div className="z-40 text-white md:text-lg font-bold w-3/4 md:w-2/3 2xl:w-1/2  mx-auto text-center" >
