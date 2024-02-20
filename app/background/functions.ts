@@ -287,13 +287,21 @@ export async function loadMountainGLB(scene: THREE.Scene) {
 
 }
 
+const getOffset = (width: number) => { 
+    if (width >= 1000) { 
+        return 390
+    }
+
+    return 320;
+}
+
 function addInstanceMesh(e: THREE.Mesh, scene: THREE.Scene, mirror: boolean) { 
     const texture = new THREE.TextureLoader().load('/mountainMaterial.png');
     const material = new THREE.MeshStandardMaterial({ map:texture, metalness: 0})
     const instancedMesh = new THREE.InstancedMesh(e.geometry, material , 10);
     instancedMesh.name = mirror ? "mountainRight" : "mountainLeft";
     instancedMesh.position.y = -20;
-    let xOffset = window.innerWidth >= 1366 ? 390 : 320;
+    let xOffset = getOffset(window.innerWidth);
     instancedMesh.position.x = mirror ? -xOffset : xOffset;
     instancedMesh.rotation.y = mirror ? -Math.PI/2 : Math.PI/2;
     instancedMesh.scale.set(300, 300, 300);
