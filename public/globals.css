@@ -6,6 +6,8 @@ body {
     background-image: url("./newbackground.png");
     background-attachment: fixed;
     backdrop-filter: blur(5px) brightness(50%); 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #container { 
