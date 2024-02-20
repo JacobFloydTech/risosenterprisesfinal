@@ -7,7 +7,7 @@ import { Noise } from 'noisejs'
 export function addWater(scene: THREE.Scene) {
 
     var waterGeometry = new THREE.PlaneGeometry(200, 100*50 , 100, 100);
-    const texture =  new THREE.TextureLoader().load('public/waternormals.jpg', function (texture) {
+    const texture =  new THREE.TextureLoader().load('/waternormals.jpg', function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
         texture.rotation = Math.PI;
     })
@@ -46,8 +46,8 @@ export function addPointLight(scene: THREE.Scene) {
 export async function addMiddleGround(scene: THREE.Scene) { 
     return new Promise<void>((resolve, reject) => { 
         const loader = new GLTFLoader()
-        loader.load('public/widerwider.glb', (obj) => { 
-            const texture = new THREE.TextureLoader().load('public/widerwider.png')
+        loader.load('/widerwider.glb', (obj) => { 
+            const texture = new THREE.TextureLoader().load('/widerwider.png')
             texture.flipY = false
             const child = obj.scene.children[0] as THREE.Mesh;
             const scale = 100;
@@ -80,7 +80,7 @@ export async function addMiddleGround(scene: THREE.Scene) {
 
 export function addUnderlyingLandscape(scene: THREE.Scene) {
     const loader = new GLTFLoader();
-    loader.load('public/underlyingLandscape.glb', gltf => { 
+    loader.load('/underlyingLandscape.glb', gltf => { 
         const child = gltf.scene.children[0] as THREE.Mesh;
         const mesh = new THREE.InstancedMesh(child.geometry, child.material, 10)
         mesh.position.set(0,20,-100)
@@ -169,7 +169,7 @@ function getXPosition() {
 export function addBoulders(scene: THREE.Scene) { 
 
     const geometry = new THREE.SphereGeometry(3, 5, 5);
-    const texture = new THREE.TextureLoader().load('public/rocks.jpg');
+    const texture = new THREE.TextureLoader().load('/rocks.jpg');
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
     texture.repeat.set(10, 10)
@@ -243,7 +243,7 @@ export function LoadTree(scene: THREE.Scene) {
     }
 
     
-    loader.load('public/tree.glb', ({ scene: { children } }) => { 
+    loader.load('/tree.glb', ({ scene: { children } }) => { 
         children[0].children.forEach((child, i) => { 
             (child as THREE.Mesh).castShadow = true;
             (child as THREE.Mesh).receiveShadow = true;
@@ -276,7 +276,7 @@ export async function loadMountainGLB(scene: THREE.Scene) {
         dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/')
         dracoLoader.setDecoderConfig({type: 'js'})
         loader.setDRACOLoader( dracoLoader );
-        loader.load('public/testingmountain.glb', (gltf) => {
+        loader.load('/testingmountain.glb', (gltf) => {
         for (var i = 0; i < 2; i++) { 
             gltf.scene.children.forEach((e) => addInstanceMesh(e as THREE.Mesh, scene, !!i))
         }
@@ -288,7 +288,7 @@ export async function loadMountainGLB(scene: THREE.Scene) {
 }
 
 function addInstanceMesh(e: THREE.Mesh, scene: THREE.Scene, mirror: boolean) { 
-    const texture = new THREE.TextureLoader().load('public/mountainMaterial.png');
+    const texture = new THREE.TextureLoader().load('/mountainMaterial.png');
     const material = new THREE.MeshStandardMaterial({ map:texture, metalness: 0})
     const instancedMesh = new THREE.InstancedMesh(e.geometry, material , 10);
     instancedMesh.name = mirror ? "mountainRight" : "mountainLeft";
@@ -360,7 +360,7 @@ export function addGrassGLB(scene: THREE.Scene, offset: number) {
 
     
 export function DustDetail(scene: THREE.Scene, mirror :boolean) { 
-    const texture = new THREE.TextureLoader().load('public/smoke.png');
+    const texture = new THREE.TextureLoader().load('/smoke.png');
     const box = new THREE.PlaneGeometry(25,100,200,200);
     
     texture.wrapS = THREE.RepeatWrapping;

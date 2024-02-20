@@ -19,11 +19,12 @@ export default function Logo() {
         })
         resizeObserver.observe(document.body)
 
-        const safariRegex = /^((?!chrome|android).)*safari/i;
+        const safariRegex = /^((?!chrome|android|vivaldi).)*safari/i;
 
         // Check if the user agent string matches Safari
         const isSafari = safariRegex.test(navigator.userAgent);
-        if (!isSafari) {
+        console.log(isSafari);
+        if (isSafari) {
             const logoElement = document.getElementById('logo');
             //@ts-ignore
           

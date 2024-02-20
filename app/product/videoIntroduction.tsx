@@ -57,17 +57,26 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
             }, (i / 2 + 0.5) * 1000);
         })
     }
+    const loadImage = ( ) => { 
+        const image = document.getElementById('waicorderRenderImage') as HTMLImageElement;
+        const video = document.getElementById('video') as HTMLVideoElement;
+        if (!image || !video) return
+        image.classList.add('videoFadeIn');
+        video.remove();
+        
+    }
 
     const particulates = ['E. coli', 'Campylobacter', 'Cryptosporidium', 'Salmonella', 'Giardia']
     const chemicals = ['Nitrates', 'Phosphates', 'Hormones', 'Microplastics', 'Cyanobacteria']
     return (
         <>
-            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition hover:scale-110 duration-100">Squeeze me</button>
+            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton overflow-hidden transition hover:scale-110 duration-100">Squeeze me</button>
             <div id='videoContainer' className=" w-full h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
-                <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
-                    <source type="video/webm" src="public/waicorderRenderTest.webm"/>
-                    <source type="video/mp4" src="public/output.mp4"/>
+                <video onError={() => loadImage()} preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
+                    <source type="video/webm" src="/waicorderRenderTest.webm"/>
+            
                 </video>
+                <img id="waicorderRenderImage" src="waicorderRender.png" className="w-full opacity-0 absolute top-0 left-0"/>
                 <div id='backgroundFilter' className="z-30 px-4 py-2 rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-1/2 bg-[rgba(255,240,0,0.2)] backdrop-blur-lg opacity-0 h-full" />
                 <div className="z-40 text-white md:text-lg font-bold w-3/4 md:w-2/3 2xl:w-1/2  mx-auto text-center" >
                     <div id='videoText' className="opacity-0">
