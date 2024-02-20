@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body { 
-    background-image: url('/newbackground.png');
+    background-image: url('newbackground.png');
     background-attachment: fixed;
     backdrop-filter: blur(5px) brightness(50%); 
 }
