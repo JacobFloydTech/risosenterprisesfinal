@@ -73,7 +73,7 @@ export default function Header() {
                         <div className="py-1 md:py-6 font-bold outlined-text flex flex-col md:space-y-4">
                             <p>There Shall Be a Future Where Everyone</p>
                             <p className="md:pb-10 pb-4">Equally Accesses Safe Drinking-Water</p>
-                            <p>We are making it to come true by enabling full control of the water quality at any time."</p>
+                            <p>We are making it to come true by enabling full control of the water quality at any time.</p>
                         </div>
                 </div>
 

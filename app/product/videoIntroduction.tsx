@@ -74,7 +74,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                         <p className=" xl:text-4xl 2xl:text-5xl 3xl:text-6xl md:text-xl  text-lg font-bold ">The Waicorder</p>
                         <p className="2xl:text-2xl xl:text-xl md:text-lg tex-sm py-2 font-semibold">Wāi Ora. Tāngata Ora</p>
                         <div className="w-full mx-auto my-2 h-[3px] bg-white 3xl:my-4 " />
-                        <p className="text-sm xl:text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Pathogenic Water Testing in Seconds</p>
+                        <p className="text-sm xl:text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Water Testing in Seconds</p>
                     </div>
                     <div ref={grid} className="grid grid-cols-2 md:-4  xl:w-3/4  mx-auto">
                         <ul className="flex flex-col items-center md:space-y-2 2xl:space-y-4">
@@ -91,13 +91,13 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
         
                     <div ref={buttons} className=" xl:w-3/4 2xl:w-2/3 pt-4 text-white z-40 flex justify-center items-center space-y-8 md:space-y-0  md:text-lg 2xl:text-xl 3xl:text-2xl my-2  md:my-4 xl:my-12   opacity-0 mx-auto">
                         <div className="flex flex-col items-center space-y-2 justify-center">
-                            <p className="text-xs py-1 md:py-4 xl:py-6 md:text-base xl:text-xl">Taking actions against waterborne pathogens instantly is critical. <br/>
+                            <p className="text-xs py-1 md:py-4 xl:py-6 md:text-base xl:text-xl">Detecting waterborne pathogens early is critical.<br/>
 It means more than freedom and independence; <br/>
 it will be the next step for all people on earth. <br/>
 This generation and the next generation. <br/>
 This planet and others to come. <br/>
 It will be the fundamental step for unity and peace. <br/>
-That's why we develop the Waicorder</p>
+That's why we develop the Waicorder.</p>
                             <p className="text-sm md:text-xl 2xl:text-lg ">Get in touch if you want to help, join or know more:</p>
                             <button onClick={() => window.location.href = '/contact'} className="bg-[#f2cc00] rounded-full border-white border-2 px-4 py-2 transition duration-200 hover:scale-105 hover:[background-size:200%] xl:hover:scale-110  p-2  3xl:px-8 3xl:py-4">Get in contact </button>
                         </div>
