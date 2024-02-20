@@ -32,13 +32,12 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     }
     function main() {
         if (!grid.current || !buttons.current) { return }
+        
         const el = document.getElementById('videoContainer');
-        if (!el) { return; }
+
         let player = document.getElementById('video') as HTMLVideoElement;
+        if (!player || !el) { return loadImageInfo()}
         player.classList.add('videoFadeIn')
-        setTimeout(() => {
-            player?.play();
-        }, 2200);
         setTimeout(() => {
             document.getElementById('backgroundFilter')?.classList.add('backgroundFilter');
             document.getElementById('videoText')?.classList.add('videoText');
@@ -47,9 +46,22 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
             children.forEach((e) => { animate(Array.from(e?.children)) })
             document.getElementById('video')?.classList.add('fadeOut')
         }, 7500);
+        setTimeout(() => {
+            player?.play();
+        }, 2200);
+
         
     }
-
+    function loadImageInfo() { 
+        setTimeout(() => {
+            document.getElementById('backgroundFilter')?.classList.add('backgroundFilter');
+            document.getElementById('videoText')?.classList.add('videoText');
+            buttons.current.classList.add('buttons');
+            const children = Array.from(grid.current?.children) as Array<any>;
+            children.forEach((e) => { animate(Array.from(e?.children)) })
+            document.getElementById('video')?.classList.add('fadeOut')
+        }, 2500);
+    }
     function animate(array: Array<HTMLParagraphElement>) {
         array.forEach((e, i) => {
             setTimeout(() => {
@@ -73,10 +85,10 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
             <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton overflow-hidden z-40 transition hover:scale-110 duration-100">Squeeze me</button>
             <div id='videoContainer' className=" w-full h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video onError={() => loadImage()} preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
-                    <source type="video/webm" src="/waicorderRenderTest.webm"/>
+                    <source type="video/webm" src="/wdasdas.webm"/>
             
                 </video>
-                <img id="waicorderRenderImage" src="waicorderRender.png" className="w-full opacity-0 absolute top-0 left-0"/>
+                <img id="waicorderRenderImage" src="waicorderRender.png" className="w-full md:w-[95%] mx-auto opacity-0 absolute top-0 left-0"/>
                 <div id='backgroundFilter' className="z-30 px-4 py-2 rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-1/2 bg-[rgba(255,240,0,0.2)] backdrop-blur-lg opacity-0 h-full" />
                 <div className="z-40 text-white md:text-lg font-bold w-3/4 md:w-2/3 2xl:w-1/2  mx-auto text-center" >
                     <div id='videoText' className="opacity-0">
