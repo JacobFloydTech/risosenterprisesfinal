@@ -23,7 +23,7 @@ export default function RootLayout({
 
       <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1" />
 
-      <body className={'bg-black  h-full overflow-x-clip'}>
+      <body className={'bg-[url("newbackground.png")]  h-full overflow-x-clip'}>
   
         <Logo />
         {children}</body>
