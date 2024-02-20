@@ -52,7 +52,7 @@ function DarkRing() {
 
 function Scene() {
   const meshRef = useRef<any>();
-  const map = useTexture('public/grid.jpg');
+  const map = useTexture('/grid.jpg');
   const render = new WebGLRenderer();
   map.wrapS = RepeatWrapping;
   map.wrapT = RepeatWrapping;
