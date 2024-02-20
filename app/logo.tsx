@@ -24,7 +24,7 @@ export default function Logo() {
         // Check if the user agent string matches Safari
         const isSafari = safariRegex.test(navigator.userAgent);
         console.log(isSafari);
-        if (isSafari) {
+        if (!isSafari) {
             const logoElement = document.getElementById('logo');
             //@ts-ignore
           
