@@ -92,7 +92,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     return (
         <>
             <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition z-50 hover:scale-110 duration-100">Squeeze me</button>
-            <div id='videoContainer' className=" w-full h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
+            <div id='videoContainer' className=" w-full overflow-hidden h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video onError={() => setError(true)} preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
                     <source type="video/webm" src="/w.webm"/>
                 
