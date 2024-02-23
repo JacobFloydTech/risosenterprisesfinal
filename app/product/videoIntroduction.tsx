@@ -93,16 +93,14 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     return (
         <>
             <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 mt-12 text-white text-2xl px-4 py-2 rounded-full squeezeButton transition z-50 hover:scale-110 duration-100">Squeeze me</button>
-            <div id='videoContainer' className=" w-full overflow-hidden h-[550px] xl:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
+            <div id='videoContainer' className=" w-full overflow-hidden h-[550px] md:h-[700px] 2xl:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
                     <source type="video/webm" src="/waicorderRenderTest.webm"/>
                 
                 </video>
                 <img id="waicorderRenderImage" src="/waicorderRender.png" className="h-[80%] md:h-auto md:w-[90%] w-full object-cover  opacity-0 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"/>
-                <div id='backgroundFilter' className="z-30 px-4 py-2  rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-1/2 bg-[rgba(255,240,0,0.2)] backdrop-blur-lg opacity-0 h-full">
-
-                </div>
-                <div className="z-40 text-white md:text-lg font-bold w-3/4 md:w-2/3 2xl:w-1/2  mx-auto text-center" >
+                <div id='backgroundFilter' className="z-30 px-4 py-2  rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full md:w-2/3 xl:w-1/2 bg-[rgba(255,240,0,0.2)] backdrop-blur-lg opacity-0 h-full">
+                <div className="z-40 text-white md:text-lg font-bold mx-auto text-center" >
                     <div id='videoText' className="opacity-0">
                         <p className=" xl:text-4xl 2xl:text-5xl 3xl:text-6xl md:text-xl  text-lg font-bold ">The Waicorder</p>
                         <p className="2xl:text-2xl xl:text-xl md:text-lg tex-sm py-2 font-semibold">Wāi Ora. Tāngata Ora</p>
@@ -136,6 +134,8 @@ That's why we develop the Waicorder.</p>
                         </div>
                     </div>
                 </div>
+                </div>
+                
 
             </div>
         </>
