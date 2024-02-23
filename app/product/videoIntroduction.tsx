@@ -39,8 +39,9 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
         let player = document.getElementById('video') as HTMLVideoElement;
 
         player.classList.add('videoFadeIn')
-
-        if (player.readyState == 0) { return animateErrorTiming()}
+        const safariRegex = /^((?!chrome|android).)*safari/i;
+        const isSafari = safariRegex.test(navigator.userAgent);
+        if (player.readyState == 0 || isSafari) { return animateErrorTiming()}
         setTimeout(() => {
                 
                 player?.play()
