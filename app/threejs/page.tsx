@@ -16,7 +16,19 @@ export default function CustomLogo() {
     // Check if the user agent string matches Safari
     const isSafari = safariRegex.test(navigator.userAgent);
     if (!isSafari) {ref.current.style.display = 'block';}
+    if (!isWebGLAvailable()) { 
+      ref.current.style.display = 'none';
+    }
+
   },[])
+  function isWebGLAvailable() {
+    try {
+        var canvas = document.createElement('canvas');
+        return !!(window.WebGLRenderingContext && ( canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+    } catch (e) {
+        return false;
+    }
+}
 
   return (
     <div ref={ref} className="h-full p-[25px] hidden  rounded-full md:p-0 xl:p-1 2xl:p-3 z-60">
