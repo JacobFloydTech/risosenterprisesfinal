@@ -19,13 +19,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
 
       <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1" />
-
-      <body className={' h-full overflow-x-clip'}>
+      <Logo />
+      <body className={'h-full overflow-x-clip'}>
   
-        <Logo />
+    
         {children}</body>
 
     </html>

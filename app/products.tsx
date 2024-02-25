@@ -47,10 +47,10 @@ export default function Products() {
     return (
 
 
-        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full xl:w-2/3 2xl:w-1/2 md:h-[1200px] 2xl:h-[1500px]  mx-auto ">
+        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full  xl:w-2/3 2xl:w-1/2 md:h-[1200px] 2xl:h-[1500px]  mx-auto ">
             <SVG/>
        
-            <div id='newsContainer' className=" flex flex-col justify-between h-[85%] my-auto  py-8 text-white  w-full xl:w-[95%] relative">
+            <div id='newsContainer' className=" flex flex-col justify-between h-[85%] my-auto  py-8 text-white  w-full  md:w-[95%] relative">
 
                 {posts?.length == 0 ?
                     <Loading /> :
@@ -92,7 +92,7 @@ function Loading() {
 
 function LinkedInPost({ data, time }: { data: string, time: string }) {
     return (
-        <div className=' rounded-xl drop-shadow-lg text-white flex flex-col productAnimation '>
+        <div className=' rounded-xl drop-shadow-lg text-white flex flex-col productAnimation md:w-3/4 mx-auto xl:w-full '>
             <SVGBackground />
             <div className="flex pt-4">
                 <p className='w-2/3 xl:text-lg 2xl:text-xl ml-12 pb-8'>{data}</p>
