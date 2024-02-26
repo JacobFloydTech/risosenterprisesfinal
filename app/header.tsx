@@ -70,10 +70,9 @@ export default function Header() {
             <div id='container' className="flex-col   h-auto md:w-3/4 w-full justify-center items-center LoraText  font-bold text-2xl md:text-4xl pb-12 mt-36 sm:mt-20 ">
 
                     <div className=" text-center overflow-hidden md:w-2/3 w-[95%] mx-auto  backdrop-blur-md bg-[rgba(255,240,0,0.2)] px-2 md:px-4 py-2 rounded-3xl ">
-                        <div className="py-1 md:py-6 font-bold outlined-text flex flex-col md:space-y-4">
+                        <div className="py-1 md:py-6 font-bold outlined-text flex flex-col md:space-y-8">
                             <p>There Shall Be a Future Where Everyone</p>
-                            <p className="md:pb-10 pb-4">Equally Accesses Safe Drinking-Water</p>
-                            <p>We are making it to come true by enabling full control of the water quality at any time.</p>
+                            <p>Equally Accesses Safe Drinking-Water</p>
                         </div>
                 </div>
 
