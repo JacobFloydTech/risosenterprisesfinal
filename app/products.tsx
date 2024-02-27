@@ -27,16 +27,15 @@ export default function Products() {
     useEffect(() => { setAnimations() }, [posts, setPosts])
 
     function setAnimations() {
-        try { 
-            //@ts-ignore
+  
+    
  if (window.innerWidth <= 1000) { 
             Array.from(document.getElementById('newsContainer')?.children ?? []).map((e) => { 
                 e.classList.remove('productAnimation')
             })
-        } 
-        } catch { 
-        
-            const parent = document.getElementById('newsContainer')
+    
+ } else { 
+                 const parent = document.getElementById('newsContainer')
             if (!parent) { return }
 
             Array.from(parent.children).forEach((e) => {
@@ -52,7 +51,6 @@ export default function Products() {
                     }
                 }, false)
             })
-    
         }
 
 
