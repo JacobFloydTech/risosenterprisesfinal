@@ -147,7 +147,7 @@ export default function Logo() {
     return (
         <div suppressHydrationWarning id='main' className="fixed w-full left-0 top-0 pt-[27px] 2xl:pt-10z-50  ">
             <div id='navbarContainer' className="w-full h-[80px] 2xl:h-[120px]  fixed z-50 hidden md:block">
-                <div id='logo'  className=" bg-black hidden  md:block h-[120px] xl:h-[140px] 2xl:h-[200px] 3xl:-translate-y-8 xl:-translate-y-6 aspect-square  rounded-full z-50 absolute md:left-1/2 md:-translate-x-[50%] overflow-hidden -translate-y-3 ">
+                <div id='logo'  className=" bg-black hidden  md:block h-[115px] xl:h-[140px] 2xl:h-[200px] 3xl:-translate-y-8 xl:-translate-y-6 aspect-square  rounded-full z-50 absolute md:left-1/2 md:-translate-x-[50%] overflow-hidden -translate-y-3 ">
                     <CustomLogo/>
                     <img ref={image} className=" mx-auto absolute -z-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%]" src="/badge.webp" />
                 </div>
