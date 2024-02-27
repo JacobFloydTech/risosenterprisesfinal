@@ -71,8 +71,8 @@ export default function Header() {
 
                     <div className=" text-center overflow-hidden md:w-2/3 w-[95%] mx-auto  backdrop-blur-md bg-[rgba(255,240,0,0.2)] px-2 md:px-4 py-2 rounded-3xl ">
                         <div className="py-1 md:py-6 font-bold outlined-text flex flex-col md:space-y-8">
-                            <p className="md:text-xl lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold">There Shall Be a Future Where Everyone</p>
-                            <p className="md:text-xl lg:text-xl xl:text-3xl 2xl:text-4xl font-semibold">Equally Accesses Safe Drinking-Water</p>
+                            <p className="md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[15px] font-semibold">There Shall Be a Future Where Everyone</p>
+                            <p className="md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[15px] font-semibold">Equally Accesses Safe Drinking-Water</p>
                         </div>
                 </div>
 
