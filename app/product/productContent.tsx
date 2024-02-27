@@ -6,7 +6,7 @@ import MissionGrid from "./mission"
 import ThreeJSBackground from "../background/sceneBackground"
 import Loading from "../loading"
 export default function ProductContent() { 
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState(true)
     return ( 
         <div className="overflow-hidden mt-44">
             <ThreeJSBackground setLoaded={setLoaded}/>

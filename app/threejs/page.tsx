@@ -31,7 +31,7 @@ export default function CustomLogo() {
 }
 
   return (
-    <div ref={ref} className="h-full p-[25px] hidden  rounded-full md:p-0 xl:p-1 2xl:p-3 z-60">
+    <div ref={ref} className="h-full p-[25px] hidden translate-x-[1px] xl:scale-100  rounded-full md:p-0 xl:p-1  2xl:p-3 z-60">
       <Canvas camera={{ position: [0, 0, 5] }} className="  bg-black w-full h-full z-60 rounded-full">
         <Model />
         <DarkRing />

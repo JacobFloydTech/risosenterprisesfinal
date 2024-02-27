@@ -3,7 +3,7 @@ import Loading from "../loading"
 import ThreeJSBackground from "../background/sceneBackground"
 import { useState } from "react"
 export default function ComingSoon() {
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState(true)
     
     return (
         <div className="flex w-full flex-col overflow-y-hidden h-screen items-center justify-center">

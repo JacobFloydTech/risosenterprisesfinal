@@ -11,11 +11,11 @@ import Loading from "../loading";
 export default function Page() {
     const [username, setUsername] = useState<null | string>(null);
     const [password, setPassword] = useState<null | string>(null);
-    const [loaded, setLoaded] = useState(false)
+    const [loaded, setLoaded] = useState(true)
 
     return (
         <SessionProvider>
-            <ThreeJSBackground setLoaded={setLoaded}/>
+       
             {loaded ? 
             
             <div className="flex flex-col justify-center items-center h-screen w-full">
