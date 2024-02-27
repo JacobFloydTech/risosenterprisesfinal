@@ -28,6 +28,7 @@ export default function Products() {
 
     function setAnimations() {
         try { 
+            //@ts-ignore
  if (!!navigator?.brave) { 
             Array.from(document.getElementById('newsContainer')?.children ?? []).map((e) => { 
                 e.classList.remove('productAnimation')
@@ -51,7 +52,7 @@ export default function Products() {
                     }
                 }, false)
             })
-        
+    
         }
 
 
