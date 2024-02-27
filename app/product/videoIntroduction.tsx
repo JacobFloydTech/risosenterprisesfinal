@@ -121,9 +121,9 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                         </ul>
                     </div>
         
-                    <div ref={buttons} className=" xl:w-3/4 2xl:w-2/3 pt-4 text-white z-40 flex justify-center items-center space-y-8 md:space-y-0  md:text-lg 2xl:text-xl 3xl:text-2xl my-2  md:my-4 xl:my-12   opacity-0 mx-auto">
+                    <div ref={buttons} className=" xl:w-3/4 2xl:w-2/3 py-2 text-white z-40 flex justify-center items-center space-y-8 md:space-y-0  md:text-lg 2xl:text-xl 3xl:text-2xl my-1 opacity-0 mx-auto">
                         <div className="flex flex-col items-center space-y-2 justify-center">
-                            <p className="text-xs py-1 md:py-4 xl:py-6 md:text-base xl:text-xl">Taking actions against waterborne pathogens instantly is critical. <br/>
+                            <p className="text-[10px]  py-1 xl:py-6 md:text-sm ">Taking actions against waterborne pathogens instantly is critical. <br/>
 It means more than freedom and independence; <br/>
 it will be the next step for all people on earth. <br/>
 This generation and the next generation. <br/>
