@@ -29,7 +29,7 @@ export default function Products() {
     function setAnimations() {
         try { 
             //@ts-ignore
- if (!!navigator?.brave) { 
+ if (window.innerWidth <= 1000) { 
             Array.from(document.getElementById('newsContainer')?.children ?? []).map((e) => { 
                 e.classList.remove('productAnimation')
             })
