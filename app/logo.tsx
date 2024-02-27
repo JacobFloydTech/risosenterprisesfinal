@@ -228,7 +228,7 @@ function Button({ e }: { e: string }) {
             <div
                 id={e}
                 onClick={() => { handleClick(e); }}
-                className={`flex z-40 cursor-pointer h-auto self-stretch w-full menuButtonContainer text-lg lg:text-xl 2xl:text-2xl 3xl:text-5xl md:p-1 font-bold items-center relative ${
+                className={`flex z-40 cursor-pointer h-auto self-stretch w-full menuButtonContainer text-lg  md:text-2xl 2xl:text-2xl 3xl:text-5xl md:p-1 font-bold items-center relative ${
                     ["Home", "Product"].includes(e) ? "md:justify-end" : 'md:justify-start'
                 }${hover ? " bg-[#FFF000]" : " bg-[#F2CC00]"}`}
        // Center text horizontally and vertically
