@@ -8,6 +8,9 @@ type post = {
     post: string;
     time: string;
 }
+function isBraveBrowser() {
+    return /Brave/.test(navigator.userAgent);
+}
 
 export default function Products() {
     const [posts, setPosts] = useState<Array<post>>();
@@ -24,30 +27,35 @@ export default function Products() {
     useEffect(() => { setAnimations() }, [posts, setPosts])
 
     function setAnimations() {
+        if (!!navigator?.brave) { 
+            Array.from(document.getElementById('newsContainer')?.children ?? []).map((e) => { 
+                e.classList.remove('productAnimation')
+            })
+        } else {  
+            const parent = document.getElementById('newsContainer')
+            if (!parent) { return }
 
-        const parent = document.getElementById('newsContainer')
-        if (!parent) { return }
+            Array.from(parent.children).forEach((e) => {
+                window.addEventListener('scroll', () => {
+                    let { top } = e.getBoundingClientRect();
+                    const target = window.innerHeight / 1.2;
 
+                    if (top < target) {
+                        e.classList.add('animate')
 
-        Array.from(parent.children).forEach((e) => {
-            window.addEventListener('scroll', () => {
-                let { top } = e.getBoundingClientRect();
-                const target = window.innerHeight / 1.2;
+                    } else if (top > window.innerHeight) {
+                        e.classList.remove('animate');
+                    }
+                }, false)
+            })
+        }
 
-                if (top < target) {
-                    e.classList.add('animate')
-
-                } else if (top > window.innerHeight) {
-                    e.classList.remove('animate');
-                }
-            }, false)
-        })
 
     }
     return (
 
 
-        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full  xl:w-2/3 2xl:w-1/2 md:h-[1200px] 2xl:h-[1500px]  mx-auto ">
+        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full   xl:w-2/3 2xl:w-1/2 md:h-[1200px] 2xl:h-[1500px]  mx-auto py-12 ">
             <SVG/>
        
             <div id='newsContainer' className=" flex flex-col justify-between h-[85%] my-auto  py-8 text-white  w-full  md:w-[95%] relative">
@@ -92,7 +100,7 @@ function Loading() {
 
 function LinkedInPost({ data, time }: { data: string, time: string }) {
     return (
-        <div className=' rounded-xl drop-shadow-lg text-white flex flex-col productAnimation md:w-3/4 mx-auto xl:w-full '>
+        <div className=' rounded-xl drop-shadow-lg text-white flex flex-col productAnimation opacity-1 md:w-3/4 mx-auto xl:w-full '>
             <SVGBackground />
             <div className="flex pt-4">
                 <p className='w-2/3 xl:text-lg 2xl:text-xl ml-12 pb-8'>{data}</p>

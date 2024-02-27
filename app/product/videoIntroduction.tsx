@@ -62,7 +62,6 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
         loadImage()
         setTimeout(() => {
             document.getElementById('video')?.remove();
-     
             document.getElementById('backgroundFilter')?.classList.add('backgroundFilter');
             document.getElementById('videoText')?.classList.add('videoText');
             buttons.current.classList.add('buttons');
@@ -81,12 +80,8 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     }
     const loadImage = ( ) => { 
         const image = document.getElementById('waicorderRenderImage') as HTMLImageElement;
-        console.log(image);
         if (!image) {return}
-      
         image.classList.add('videoFadeIn');
-
-        
     }
 
     const particulates = ['E. coli', 'Campylobacter', 'Cryptosporidium', 'Salmonella', 'Giardia']
