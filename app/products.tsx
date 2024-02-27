@@ -23,27 +23,33 @@ export default function Products() {
 
     useEffect(() => { setAnimations() }, [posts, setPosts])
 
-    function setAnimations() {
-  
-    
- if (window.innerWidth <= 1000) { 
-            Array.from(document.getElementById('newsContainer')?.children ?? []).map((e) => { 
-                e.classList.remove('productAnimation')
-            })
-    
- } else { 
-                 const parent = document.getElementById('newsContainer')
+
+        function setAnimations() {
+
+            const parent = document.getElementById('newsContainer')
             if (!parent) { return }
+
+
+            Array.from(parent.children).forEach((e) => {
+                window.addEventListener('scroll', () => {
+                    let { top } = e.getBoundingClientRect();
+                    const target = window.innerHeight / 1.2;
+
+                    if (top < target) {
+                        e.classList.add('animate')
+
+                    } else if (top > window.innerHeight) {
+                        e.classList.remove('animate');
+                    }
+                }, false)
+            })
 
         }
 
-
-
-    }
     return (
 
 
-        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full   xl:w-2/3 2xl:w-1/2 h-full bg-black 2xl:h-[1500px]  mx-auto py-12 ">
+        <div id='container' className="grid xl:grid-cols-[30%_70%] md:grid-cols-[1fr_4fr]  w-full   xl:w-2/3 2xl:w-1/2 h-full  2xl:h-[1500px]  mx-auto py-12 ">
             <SVG/>
        
             <div id='newsContainer' className=" flex flex-col justify-between h-[85%] my-auto  py-8 text-white  w-full  md:w-[95%] relative">
