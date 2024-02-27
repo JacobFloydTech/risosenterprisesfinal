@@ -27,11 +27,14 @@ export default function Products() {
     useEffect(() => { setAnimations() }, [posts, setPosts])
 
     function setAnimations() {
-        if (!!navigator?.brave) { 
+        try { 
+ if (!!navigator?.brave) { 
             Array.from(document.getElementById('newsContainer')?.children ?? []).map((e) => { 
                 e.classList.remove('productAnimation')
             })
-        } else {  
+        } 
+        } catch { 
+        
             const parent = document.getElementById('newsContainer')
             if (!parent) { return }
 
@@ -48,7 +51,9 @@ export default function Products() {
                     }
                 }, false)
             })
+        
         }
+
 
 
     }
