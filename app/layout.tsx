@@ -22,9 +22,9 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
 
       <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1" />
-      <Logo />
-      <body className={'h-full overflow-x-clip'}>
-  
+   
+      <body className={' overflow-x-clip'}>
+     <Logo />
     
         {children}</body>
 
