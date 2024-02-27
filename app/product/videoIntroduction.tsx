@@ -95,7 +95,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                 
                 </video>
                 <img id="waicorderRenderImage" src="/waicorderRender.png" className="h-[80%] md:h-auto md:w-[90%] w-full object-cover  opacity-0 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"/>
-                <div id='backgroundFilter' className="z-30 px-4 py-2  rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full xl:w-2/3 bg-[rgba(255,240,0,0.4)] dark:bg-[rgba(255,240,0,0.4)] dark:backdrop-blur-sm  backdrop-blur-lg opacity-0 h-full">
+                <div id='backgroundFilter' className="z-30 px-4 py-2  rounded-3xl absolute top-0 left-1/2 -translate-x-1/2 w-full xl:w-2/3  bg-[rgba(255,240,0,0.2)] backdrop-blur-lg opacity-0 h-full">
                 <div className="z-40 text-white md:text-lg font-bold mx-auto text-center" >
                     <div id='videoText' className="opacity-0">
                         <p className=" xl:text-4xl 2xl:text-5xl 3xl:text-6xl md:text-xl  text-xl font-bold ">The Waicorder</p>
