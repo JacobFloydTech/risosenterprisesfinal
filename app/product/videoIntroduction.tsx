@@ -61,7 +61,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     const animateErrorTiming = ( ) => { 
         loadImage()
         setTimeout(() => {
-        
+            document.getElementById('video')?.remove();
      
             document.getElementById('backgroundFilter')?.classList.add('backgroundFilter');
             document.getElementById('videoText')?.classList.add('videoText');
