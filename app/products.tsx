@@ -94,7 +94,7 @@ function Loading() {
 
 function LinkedInPost({ data, time }: { data: string, time: string }) {
     return (
-        <div className=' rounded-xl drop-shadow-lg text-white flex flex-col  opacity-1 md:w-3/4 mx-auto xl:w-full '>
+        <div className=' rounded-xl drop-shadow-lg text-white flex flex-col productAnimation opacity-1 md:w-3/4 mx-auto xl:w-full '>
             <SVGBackground />
             <div className="flex pt-4">
                 <p className='w-2/3 xl:text-lg 2xl:text-xl ml-12 pb-8'>{data}</p>
