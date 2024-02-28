@@ -101,24 +101,24 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                             <p className=" xl:text-4xl 2xl:text-5xl 3xl:text-6xl md:text-xl  text-xl font-bold ">The Waicorder</p>
                             <p className="2xl:text-2xl xl:text-xl md:text-lg tex-sm py-2 font-semibold">Wāi Ora. Tāngata Ora</p>
                             <div className="w-full mx-auto my-2 h-[3px] bg-white 3xl:my-4 " />
-                            <p className="text-sm xl:text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Water Testing in Seconds</p>
+                            <p className="text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Water Testing in Seconds</p>
                         </div>
                         <div ref={grid} className="grid grid-cols-2  xl:w-3/4   w-full mx-auto">
                             <ul className="flex flex-col items-center md:space-y-2 2xl:space-y-4">
                                 {particulates.map((e) => {
-                                    return <p className="lg:text-left text-sm md:text-xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
+                                    return <p className="lg:text-left text-[20px] md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
                                 })}
                             </ul>
                             <ul className="flex flex-col items-center  md:space-y-2 2xl:space-y-4">
                                 {chemicals.map((e) => {
-                                    return <p className="lg:text-left text-sm md:text-xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
+                                    return <p className="lg:text-left text-[20px] md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
                                 })}
                             </ul>
                         </div>
                             
                     <div ref={buttons} className=" xl:w-3/4 2xl:w-2/3 py-2 text-white z-40 flex justify-center items-center space-y-8 md:space-y-0  md:text-lg 2xl:text-xl 3xl:text-2xl my-1 opacity-0 mx-auto">
                         <div className="flex flex-col items-center space-y-2 justify-center">
-                            <p className="text-[12px] md:text-lg 2xl:text-2xl py-1 xl:py-6 ">Taking actions against waterborne pathogens instantly is critical. <br/>
+                            <p className="text-[14px] md:text-lg 2xl:text-2xl py-1 xl:py-6 ">Taking actions against waterborne pathogens instantly is critical. <br/>
 It means more than freedom and independence; <br/>
 it will be the next step for all people on earth. <br/>
 This generation and the next generation. <br/>
