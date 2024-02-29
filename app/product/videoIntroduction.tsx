@@ -106,12 +106,12 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                         <div ref={grid} className="grid grid-cols-2 px-4 sm:w-5/6 xl:w-3/4   w-full mx-auto">
                             <ul className="flex flex-col items-center md:space-y-2 2xl:space-y-4">
                                 {particulates.map((e) => {
-                                    return <p className="lg:text-left font-bold text-xl md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
+                                    return <p className="lg:text-left font-bold text-xl md:text-2xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
                                 })}
                             </ul>
                             <ul className="flex flex-col items-center  md:space-y-2 2xl:space-y-4">
                                 {chemicals.map((e) => {
-                                    return <p className="lg:text-left font-bold text-xl md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
+                                    return <p className="lg:text-left font-bold text-xl md:text-2xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
                                 })}
                             </ul>
                         </div>
