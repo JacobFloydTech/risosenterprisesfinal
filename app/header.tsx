@@ -77,8 +77,9 @@ export default function Header() {
                 </div>
 
             </div>
-         
-            <VideoIntroduction setter={setVideoLoaded} />
+            <div className="relative w-full h-full">
+                <VideoIntroduction setter={setVideoLoaded} />
+            </div>
        
             <div id='mission' className="font-bold opacity-0 py-4 text-2xl px-2 md:text-5xl text-[#FFFF00] LoraText pt-12">News</div>
         </div>

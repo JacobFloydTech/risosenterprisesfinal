@@ -88,7 +88,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     const chemicals = ['Nitrates', 'Phosphates', 'Hormones', 'Microplastics', 'Cyanobacteria']
     return (
         <>
-            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300  text-white text-2xl px-4 py-2 rounded-full squeezeButton transition z-50 hover:scale-110 duration-100">Squeeze me</button>
+            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold w-2/3 px-4 py-2 rounded-full squeezeButton transition z-50 hover:scale-110 duration-100">Squeeze me</button>
             <div id='videoContainer' className=" w-full overflow-hidden h-[600px]  md:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
                     <source type="video/webm" src="/waicorderRenderTest.webm"/>
@@ -103,15 +103,15 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
                             <div className="w-full mx-auto my-2 h-[3px] bg-white 3xl:my-4 " />
                             <p className="text-lg 2xl:text-3xl 3xl:text-5xl py-2 xl:py-4 2xl:py-6 3xl:py-12">Water Testing in Seconds</p>
                         </div>
-                        <div ref={grid} className="grid grid-cols-2  xl:w-3/4   w-full mx-auto">
+                        <div ref={grid} className="grid grid-cols-2 px-4 sm:w-5/6 xl:w-3/4   w-full mx-auto">
                             <ul className="flex flex-col items-center md:space-y-2 2xl:space-y-4">
                                 {particulates.map((e) => {
-                                    return <p className="lg:text-left text-[20px] md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
+                                    return <p className="lg:text-left font-bold text-xl md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
                                 })}
                             </ul>
                             <ul className="flex flex-col items-center  md:space-y-2 2xl:space-y-4">
                                 {chemicals.map((e) => {
-                                    return <p className="lg:text-left text-[20px] md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
+                                    return <p className="lg:text-left font-bold text-xl md:text-2xl xl:text-xl 2xl:text-4xl 3xl:text-5xl md:w-1/2 mx-auto text-center opacity-0">{e}</p>
                                 })}
                             </ul>
                         </div>
