@@ -88,7 +88,7 @@ export default function VideoIntroduction({setter}: { setter: Function}) {
     const chemicals = ['Nitrates', 'Phosphates', 'Hormones', 'Microplastics', 'Cyanobacteria']
     return (
         <>
-            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 absolute top-1/2 -translate-1/2 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold w-2/3 md:w-auto px-4 py-2 rounded-full squeezeButton transition z-50 hover:scale-110 duration-100">Squeeze me</button>
+            <button ref={button} onClick={() => {start(); button.current.classList.add('fadeOut'); button.current.classList.remove('squeezeButton')}} className="bg-yellow-300 absolute top-1/3 -translate-y-1/3 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold w-2/3 md:w-auto px-4 py-2 rounded-full squeezeButton transition z-50 hover:scale-110 duration-100">Squeeze me</button>
             <div id='videoContainer' className=" w-full overflow-hidden h-[600px]  md:h-[950px]  relative flex flex-col justify-center items-center ">
                 <video preload="auto" disableRemotePlayback id='video' className="w-full opacity-0 h-full object-cover md:object-contain top-0 left-0 absolute" playsInline controls={false} muted>
                     <source type="video/webm" src="/waicorderRenderTest.webm"/>
