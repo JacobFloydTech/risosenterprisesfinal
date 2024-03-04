@@ -6,6 +6,7 @@ import { RepeatWrapping, TextureLoader, WebGLRenderer } from "three";
 
 import { useTexture } from "@react-three/drei";
 
+import {LogoModel} from '../Logo3.jsx'
 export default function CustomLogo() {
   const ref = useRef<any>();
   useEffect(() => { 
@@ -33,7 +34,7 @@ export default function CustomLogo() {
   return (
     <div ref={ref} className="h-full p-[25px] hidden translate-x-[1px] xl:scale-100  rounded-full md:p-0 xl:p-1  2xl:p-3 z-60">
       <Canvas camera={{ position: [0, 0, 5] }} className="  bg-black w-full h-full z-60 rounded-full">
-        <Model />
+        <LogoModel/>
         <DarkRing />
         <Scene />
         <Ring />
