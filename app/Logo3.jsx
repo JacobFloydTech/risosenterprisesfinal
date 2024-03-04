@@ -6,12 +6,14 @@ Command: npx gltfjsx@6.2.16 Logo3.glb
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
+const factor = 1.1;
+
 export function LogoModel(props) {
   const { nodes, materials } = useGLTF('/Logo3.glb')
   return (
     <group {...props} dispose={null}>
       <group>
-      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.001']} position={[0.2, 0, 2.3]} rotation={[Math.PI / 2, 0, 0]} scale={[40, 15, 40]}>
+      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.001']} position={[-0.2, -0.1, 2.3]} rotation={[Math.PI / 2, 0, 0]} scale={[33/factor, 15/factor, 45/factor]}>
             <shaderMaterial vertexShader={shader.vertexShader} fragmentShader={shader.fragmentShader} />
         </mesh>
       </group>
