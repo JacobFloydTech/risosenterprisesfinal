@@ -13,7 +13,7 @@ export function LogoModel(props) {
   return (
     <group {...props} dispose={null}>
       <group>
-      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.001']} position={[-0.2, -0.1, 2.3]} rotation={[Math.PI / 2, 0, 0]} scale={[33/factor, 15/factor, 45/factor]}>
+      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.001']} position={[-0.18, -0.1, 2.5]} rotation={[Math.PI / 2, 0, 0]} scale={[35, 15/factor, 30]}>
             <shaderMaterial vertexShader={shader.vertexShader} fragmentShader={shader.fragmentShader} />
         </mesh>
       </group>
