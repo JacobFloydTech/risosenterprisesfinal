@@ -166,9 +166,9 @@ export default function Logo() {
             </div>
             <div className="h-36 w-full fixed pt-2   bg-inherit md:hidden">
 
-                <div className="h-[180px] w-[180px] -translate-y-5  rounded-full bg-inherit  z-50 right-0  absolute">
+                <div className="h-[180px] w-[180px] -translate-y-5 bg-black rounded-full   z-50 right-0  absolute">
             
-                    <img ref={image} className=" mx-auto absolute -z-10 top-0 left-0" src="/badge.webp" />
+                    <img ref={image} className=" mx-auto absolute -z-10 top-[2px] left-0" src="/badge.webp" />
                 </div>
 
                 <div id='buttonGrid' className="grid -z-10 absolute h-full w-3/4 backdrop-blur-xl bg-[rgba(1,1,1,0.2)] gap-y-2 grid-col-1 grid-rows-4">
